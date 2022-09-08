@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/ico/favicon.ico" rel="icon" />
+    <link href="css/normalized.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/index.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <title>Travel Portal</title>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="header-logo">
+                <a href="#">
+                    <img src="assets/svg/header-logo.svg" alt="Logo" />
+                    <p class="logo-title">Travel Portal</p>
+                </a>
+            </div>
+            <nav class="main-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#preview" class="nav-link">How It Works</a></li>
+                    <li class="nav-item"><a href="#steps" class="nav-link">Plan Your Trip</a></li>
+                    <li class="nav-item"><a href="#destinations" class="nav-link">Destinations</a></li>
+                    <li class="nav-item"><a href="#stories" class="nav-link">Travel Stories</a></li>
+                    <li class="nav-item burgerLogin burger-menu-item"><a href="#" id="burgerLogin" class="nav-link">Account</a></li>
+                    <li class="nav-item burger-menu-item"><a href="#footer" class="nav-link">Social Media</a></li>
+                </ul>
+                <div class="close-menu">
+                    <span class="close-menu-line"></span>
+                    <span class="close-menu-line"></span>
+                </div>
+            </nav>
+            <div class="login-button">
+                <input type="button" id="login" name="login-button" value="Login" />
+            </div>
+            <div class="burger-menu-open">
+                <span class="burger-menu-line bml-first"></span>
+                <span class="burger-menu-line bml-second"></span>
+                <span class="burger-menu-line bml-third"></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container container">
+            <div class="login-section">
+                <div class="popup">
+                    <h2>Log in to your account</h2>
+                    <div class="facebook">
+                        <a href="#"><p>Sign In with Facebook</p></a>
+                    </div>
+                    <div class="google">
+                        <a href="#"><p>Sign In with Google</p></a>
+                    </div>
+                    <div class="separator">
+                        <span>or</span>
+                    </div>
+                    <form id="sign-in-form" action="onsubmit" method="post">
+                        <div class="form-post">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" value="" required />
+                            <label for="password">Password</label>
+                            <input id="password" type="password" name="password" value="" required />
+                            <input type="submit" id="sign-in-submit" name="submit" value="Sign In" />
+                        </div>
+                    </form>
+                    <a class="forgot-password" href="#">Forgot Your Password?</a>
+                    <hr class="hr">
+                    <p class="register">Don’t have an account? <a id="goto-signup" href="#">Register</a></p>
+                </div>
+                <div class="signup">
+                    <h2>Create account</h2>
+                    <form id="sign-up-form" method="post">
+                        <div class="form-new-user">
+                            <label for="nu-email">E-mail</label>
+                            <input id="nu-email" type="email" name="nu-email" value="" required />
+                            <label for="nu-password">Password</label>
+                            <input id="nu-password" type="password" name="nu-password" value="" required />
+                            <input type="submit" id="sign-up-submit" name="nu-submit" value="Sign Up" />
+                        </div>
+                    </form>
+                    <hr class="hr">
+                    <p class="have-account">Already have an account? <a id="goto-popup" href="#">Log in</a></p>
+                </div>
+            </div>
+            <section class="section" id="preview">
+                <div class="preview-container">
+                    <h1>Explore the beauty of the World</h1>
+                    <p>Receive personalized recommendations for countries, hotels, activities and more</p>
+                    <div class="search-box">
+                        <input type="text" name="search-text" value="" placeholder="What would you like to do?" />
+                        <input type="button" name="search-button" value="Start Planning" />
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="steps">
+                <h2>3 Steps to the perfect trip</h2>
+                <div class="steps-table">
+                    <div class="steps-cell">
+                        <div class="steps-img">
+                            <img src="assets/svg/bicycle.svg" alt="bicycle" />
+                        </div>
+                        <p>Tell us what you want to do</p>
+                    </div>
+                    <div class="steps-cell">
+                        <div class="steps-img">
+                            <img src="assets/svg/calendar.svg" alt="calendar" />
+                        </div>
+                        <p>Share us preferable dates </p>
+                    </div>
+                    <div class="steps-cell">
+                        <div class="steps-img">
+                            <img src="assets/svg/airplane.svg" alt="airplane" />
+                        </div>
+                        <p>We will give you recommendations</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="destinations">
+                <h2>Popular destinations</h2>
+                <div class="slider-table">
+                    <div class="left-arrow">
+                        <svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="slider-arrow-left" d="M14.0757 24.9325C14.4272 24.5809 14.6246 24.1041 14.6246 23.6069C14.6246 23.1097 14.4272 22.6329 14.0757 22.2813L4.7944 13L14.0757 3.71875C14.4172 3.36512 14.6062 2.89149 14.6019 2.39987C14.5976 1.90825 14.4005 1.43798 14.0528 1.09034C13.7052 0.742699 13.2349 0.545507 12.7433 0.541237C12.2517 0.536964 11.778 0.725954 11.4244 1.0675L0.817529 11.6744C0.466021 12.026 0.268555 12.5028 0.268555 13C0.268555 13.4972 0.466021 13.974 0.817529 14.3256L11.4244 24.9325C11.776 25.284 12.2528 25.4815 12.75 25.4815C13.2472 25.4815 13.724 25.284 14.0757 24.9325Z" fill="#F2785C" fill-opacity="0.5" />
+                        </svg>
+                    </div>
+                    <div class="slider-box">
+                        <div class="slider-cell tempLeft">
+                            <p>Spain</p>
+                            <img class="spain">
+                        </div>
+                        <div class="slider-cell" id="left-slide">
+                            <p>Spain</p>
+                            <img class="spain">
+                        </div>
+                        <div class="slider-cell" id="active-slide">
+                            <p>Japan</p>
+                            <img class="japan">
+                        </div>
+                        <div class="slider-cell" id="right-slide">
+                            <p>Usa</p>
+                            <img class="usa">
+                        </div>
+                        <div class="slider-cell tempRight">
+                            <p>Usa</p>
+                            <img class="usa">
+                        </div>
+                    </div>
+                    <div class="right-arrow">
+                        <svg width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="slider-arrow-right" d="M14.0757 24.9325C14.4272 24.5809 14.6246 24.1041 14.6246 23.6069C14.6246 23.1097 14.4272 22.6329 14.0757 22.2813L4.7944 13L14.0757 3.71875C14.4172 3.36512 14.6062 2.89149 14.6019 2.39987C14.5976 1.90825 14.4005 1.43798 14.0528 1.09034C13.7052 0.742699 13.2349 0.545507 12.7433 0.541237C12.2517 0.536964 11.778 0.725954 11.4244 1.0675L0.817529 11.6744C0.466021 12.026 0.268555 12.5028 0.268555 13C0.268555 13.4972 0.466021 13.974 0.817529 14.3256L11.4244 24.9325C11.776 25.284 12.2528 25.4815 12.75 25.4815C13.2472 25.4815 13.724 25.284 14.0757 24.9325Z" fill="#F2785C" fill-opacity="0.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="selector-pagination"></div>
+                    <div class="selector-pagination"></div>
+                    <div class="selector-pagination"></div>
+                </div>
+                <input type="button" name="find-button" value="Find More" />
+            </section>
+            <section class="section" id="stories">
+                <h2>Travel stories</h2>
+                <div class="media-container-stories">
+                    <div class="media-container-stories-bg">
+                        <div class="media">
+                            <div class="media-obj">
+                                <img class="thailand" alt="Thailand" />
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">10 Photos of Attractive Thailand</h3>
+                                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-obj">
+                                <img class="utah" alt="Utah" />
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">Canyonlands National Park, Utah</h3>
+                                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-obj">
+                                <img class="mountains" alt="Mountains" />
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">I left my heart in the Mountains!</h3>
+                                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-obj">
+                                <img class="journey" alt="Journey" />
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">The Longest journey in my life!</h3>
+                                <p lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+                            <input type="button" name="stories-button" value="See More" />
+                        </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="container footer">
+            <p class="copyright">All Rights Reserved &#169; Travel Portal</p>
+            <div  class="social-box">
+                <ul>
+                    <li><a href="https://rs.school/js-stage0/" target="_blank"><img class="instagram" src="assets/svg/instagram.svg" alt="Instagram" /></a></li>
+                    <li><a href="https://rs.school/js-stage0/" target="_blank"><img src="assets/svg/youtube.svg" alt="YouTube" /></a></li>
+                    <li><a href="https://github.com/DeFranS325" target="_blank"><img src="assets/svg/twitter.svg" alt="Twitter" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
